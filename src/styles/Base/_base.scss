@@ -1,9 +1,9 @@
 // Style SCSS de Base des différentes pages du projet
 
 body {
-  background: #fff;
+  background: $white-color;
   width: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: $font_principal;
   max-width: 1440px;
   margin: auto;
 }

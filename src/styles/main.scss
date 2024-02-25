@@ -1,4 +1,5 @@
-@import "../styles/Base/base";
-@import "../styles/variables/variables";
+@import "../styles/Base/reset.scss";
+@import "../styles/variables/variables.scss";
+@import "../styles/Base/base.scss";
 @import "../components/Hearder/hearder.scss";
 @import "../components/Footer/footer.scss";

@@ -1,18 +1,12 @@
 // @ts-nocheck
 import React from "react";
 import "./styles/main.scss";
-import Header from "./components/Hearder/Header";
-import Home from "./pages/Home/Home";
-import Footer from "./components/Footer/Footer";
-
+import Router from "./Router.js";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Home />
-      <Footer />
+      <Router />
     </div>
   );
 }
-
 export default App;

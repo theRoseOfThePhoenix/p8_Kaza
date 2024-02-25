@@ -7,6 +7,37 @@
   height: 68px;
   margin: 40px 20px;
 
+  &_logo {
+    width: 210px;
+    height: 68px;
+
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      display: block;
+      width: 145px;
+      height: 47px;
+      transform: scale(0.8);
+      margin-left: -15px;
+      margin-bottom: 5px;
+      padding-bottom: 10px;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+      width: 180px;
+      height: 58px;
+    }
+  }
+
+  &_nav {
+    gap: 57px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    list-style-type: none;
+  }
   @media screen and (max-width: map-get($breakpoints, mobile)) {
     width: 90%;
     margin: 20px auto -19px;
@@ -21,70 +52,28 @@
     margin-right: 125px;
   }
 }
-
-.logo {
-  width: 210px;
-  height: 68px;
-
-  @media screen and (max-width: map-get($breakpoints, mobile)) {
-    display: block;
-    width: 145px;
-    height: 47px;
-    transform: scale(0.8);
-    margin-left: -15px;
-    margin-bottom: 5px;
-    padding-bottom: 10px;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
-    width: 180px;
-    height: 58px;
-  }
-}
-
-.nav {
-  left: 90.65%;
-  right: 0%;
-  top: 25%;
-  bottom: 25%;
-
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 142.6%;
-
-  display: flex;
-  align-items: flex-end;
-  text-align: right;
-
-  color: $primary-color;
-  list-style-type: none;
-
-  &_item {
-    &_active {
-      position: relative;
-      text-decoration: underline solid $primary-color;
-    }
-  }
-}
-
-.navlink {
-  color: $primary-color;
-  padding-left: 57px;
+a .navLink {
   text-decoration: none;
-  justify-content: space-between;
-
-  &:hover {
-    text-decoration-line: underline;
-    color: $primary-color;
-  }
-
-  @media screen and (max-width: map-get($breakpoints, mobile)) {
-    font-size: 12px;
-    padding-right: 3px;
-    padding-left: 10px;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-  }
 }
+a .navLink:hover {
+  text-decoration: underline;
+}
+// .navlink {
+//   color: $primary-color;
+//   padding-left: 57px;
+//   text-decoration: none;
+//   justify-content: space-between;
+
+//   &:hover {
+//     text-decoration-line: underline;
+//     color: $primary-color;
+//   }
+
+//   @media screen and (max-width: map-get($breakpoints, mobile)) {
+//     font-size: 12px;
+//     padding-right: 3px;
+//     padding-left: 10px;
+//     padding-bottom: 20px;
+//     text-transform: uppercase;
+//   }
+// }
