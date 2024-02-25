@@ -5,7 +5,7 @@ import App from "./App";
 import ReactDOM from "react-dom/client";
 import "./styles/main.scss";
 import reportWebVitals from "./reportWebVitals";
-import Header from "./components/Hearder/Header";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

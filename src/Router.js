@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home/Home";
+import Home from "./pages/Home/Home";
 import Error from "./pages/Error/Error";
 import About from "./pages/About/About";
 

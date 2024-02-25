@@ -7,10 +7,10 @@ function Header() {
     <nav className="header">
       <img src={Img} alt="logo de Kasa" className="header_logo" />
       <ul className="header_nav">
-        <Link className="navLink" to="/">
+        <Link to="/" className="navlink">
           Acceuil
         </Link>
-        <Link className="navLink" to="/about">
+        <Link to="/about" className="navlink">
           A propos
         </Link>
       </ul>
