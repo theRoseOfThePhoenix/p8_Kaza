@@ -1,7 +1,6 @@
 .header {
   position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin: auto;
   height: 68px;
@@ -62,7 +61,6 @@
 
   &:hover {
     text-decoration-line: underline;
-    color: $primary-color;
   }
 }
 

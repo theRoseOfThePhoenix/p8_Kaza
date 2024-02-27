@@ -8,7 +8,7 @@ function Footer() {
         src={LogoFooter}
         alt="logo de Kasa du footer"
       />
-      <p className="footer_coopyrat">© 2020 Kasa. All rights reserved</p>
+      <p className="footer_coopyrat">© 2024 Kasa. All rights reserved</p>
     </footer>
   );
 }
