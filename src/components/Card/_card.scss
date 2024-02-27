@@ -12,11 +12,25 @@
   &_card {
     width: 340px;
     height: 340px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    &:hover {
+      @include effect;
+      background: linear-gradient(
+        180deg,
+        rgba(246, 246, 246, 0.4290091036414566) 0%,
+        rgba(255, 96, 96, 1) 58%
+      );
+    }
+
     &--image {
       width: 100%;
       height: 340px;
