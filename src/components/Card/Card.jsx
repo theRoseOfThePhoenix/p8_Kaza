@@ -6,14 +6,16 @@ function Card() {
   return (
     <div className="galleryDesLogements">
       {fichierLogements.map((objetLogement) => (
-        <Link to={`/logements/${objetLogement.id}`} key={objetLogement.id}>
-          <div className="card>">
+        <Link to={`/logements/${objetLogement.id}`}>
+          <div className="galleryDesLogements_card">
             <img
               src={objetLogement.cover}
               alt={objetLogement.title}
-              className="card_image"
+              className="galleryDesLogements_card--image"
             />
-            <div className="card_titre">{objetLogement.title}</div>
+            <h3 className="galleryDesLogements_card--titre">
+              {objetLogement.title}
+            </h3>
           </div>
         </Link>
       ))}

@@ -5,7 +5,7 @@ import Card from "../../components/Card/Card";
 
 function Home() {
   return (
-    <div>
+    <div className="main">
       <Banner
         src={BannerImg}
         alt={`Photo d'une côte de Mer`}
