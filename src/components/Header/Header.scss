@@ -50,9 +50,7 @@
     margin-right: 125px;
   }
 }
-// .navLink-1 .navLink-2 {
-//   text-decoration: none;
-// }
+
 .navlink {
   color: $black-color;
   padding-left: 57px;
@@ -63,7 +61,6 @@
     text-decoration-line: underline;
     color: $primary-color;
     @include effect;
-    box-shadow: none;
   }
 }
 

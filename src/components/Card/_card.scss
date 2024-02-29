@@ -24,6 +24,7 @@
     align-items: center;
     &:hover {
       @include effect;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
       background: linear-gradient(
         180deg,
         rgba(246, 246, 246, 0.4290091036414566) 0%,
