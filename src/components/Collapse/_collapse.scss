@@ -1,0 +1,42 @@
+.collapse {
+  width: 1023px;
+  margin: 30px auto;
+  &_titre {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 47px;
+    background-color: $primary-color;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 500;
+    color: $white-color;
+    padding: 0 18px;
+  }
+  &_content {
+    color: $primary-color;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: $secondary-color;
+    border-radius: 0 0 5px 5px;
+    padding: 22px 18px;
+    text-align: start;
+    width: auto;
+    transition: background 0.3s;
+    border-radius: 4px;
+    transform-origin: top center;
+    transform: rotate(0.1deg);
+    transition: all 0.3s;
+  }
+  &_arrow {
+    transform: rotate(180deg);
+    transition: all 0.4s;
+    cursor: pointer;
+    &-up {
+      transform: rotate(0deg);
+      transition: all 0.4s;
+      cursor: pointer;
+    }
+  }
+}
