@@ -1,7 +1,8 @@
 import React from "react";
+// @ts-ignore
+import Gallery from "../../components/Gallery/Gallery";
 import Banner from "../../components/Banner/Banner";
 import BannerImg from "../../asset/banner_img2.jpeg";
-import Card from "../../components/Card/Card";
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
         alt={`Photo d'une côte de Mer`}
         title={`Chez vous, partout et ailleurs`}
       />
-      <Card />
+      <Gallery />
     </div>
   );
 }

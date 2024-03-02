@@ -2,11 +2,9 @@
   width: 1240px;
   height: 223px;
   margin: auto;
-  display: flex;
+  @include flexmid;
   border-radius: 25px;
   background-color: $black-color;
-  justify-content: center;
-  align-items: center;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   &_image {
     margin: auto;
