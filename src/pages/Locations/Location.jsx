@@ -30,7 +30,7 @@ function AffichageDuneLocation() {
               <Host propriètaire={objetLogement} />
               <Tags infoTag={objetLogement} />
             </div>
-            <div className="collapseLocation">
+            <div className="location_collapse">
               <Collapse
                 key={objetLogement.description}
                 title="Description"

@@ -1,0 +1,12 @@
+.location {
+  margin: 0 100px;
+  &_info {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+  }
+  &_collapse {
+    display: flex;
+    gap: 70px;
+  }
+}
