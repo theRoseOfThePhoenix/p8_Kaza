@@ -6,6 +6,7 @@ import Host from "../../components/Host/Host";
 import NameAndLocation from "../../components/NameAndLocation/NameAndLocation";
 import Tags from "../../components/Tags/Tags";
 import Carrousel from "../../components/Carrousel/Carrousel";
+import Stars from "../../components/Stars/Stars";
 
 function AffichageDuneLocation() {
   let { id } = useParams();
@@ -31,7 +32,9 @@ function AffichageDuneLocation() {
               />
               <Host propriètaire={objetLogement} />
               <Tags infoTag={objetLogement} />
+              <Stars infos={objetLogement} />
             </div>
+
             <div className="location_collapse">
               <Collapse
                 key={objetLogement.description}
