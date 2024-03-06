@@ -9,6 +9,7 @@
   &_logo {
     width: 210px;
     height: 68px;
+    cursor: pointer;
 
     @media screen and (max-width: map-get($breakpoints, mobile)) {
       display: block;

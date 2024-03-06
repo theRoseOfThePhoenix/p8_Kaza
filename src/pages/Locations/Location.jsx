@@ -5,6 +5,7 @@ import Collapse from "../../components/Collapse/Collapse";
 import Host from "../../components/Host/Host";
 import NameAndLocation from "../../components/NameAndLocation/NameAndLocation";
 import Tags from "../../components/Tags/Tags";
+import Carrousel from "../../components/Carrousel/Carrousel";
 
 function AffichageDuneLocation() {
   let { id } = useParams();
@@ -22,6 +23,7 @@ function AffichageDuneLocation() {
       {DataLogements.filter((objetLogement) => objetLogement.id === id).map(
         (objetLogement) => (
           <div key={objetLogement.id} className="location">
+            <Carrousel slides={objetLogement.pictures} />
             <div className="location_info">
               <NameAndLocation
                 title={objetLogement.title}

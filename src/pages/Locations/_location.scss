@@ -1,5 +1,9 @@
 .location {
   margin: 0 100px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+
   &_info {
     display: grid;
     grid-template-columns: 4fr 1fr;
