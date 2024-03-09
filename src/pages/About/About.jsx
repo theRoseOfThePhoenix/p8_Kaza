@@ -12,7 +12,7 @@ function About() {
         title={``}
       />
 
-      <div className="collapse">
+      <div className="collapseContaint">
         <Collapse
           title="Fiabilité"
           content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes 

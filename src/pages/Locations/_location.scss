@@ -3,14 +3,46 @@
   gap: 20px;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    margin: 0 20px;
+  }
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+    margin: 0 50px;
+  }
 
   &_info {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 630px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+    &-left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      @media screen and (max-width: 630px) {
+        //pour la taille des titres dans location ne s'entrechoque pas
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
   }
   &_collapse {
     display: flex;
     gap: 70px;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+      gap: 20px;
+    }
   }
 }

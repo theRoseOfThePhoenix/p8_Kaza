@@ -8,9 +8,9 @@ import Location from "./pages/Locations/Location";
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
       <Route path="/logements/:id" element={<Location />} />
       <Route path="/about" element={<About />} />
+      <Route path="/" element={<Home />} />
       <Route path="/*" element={<Error />} />
     </Routes>
   );

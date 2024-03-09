@@ -1,7 +1,5 @@
 .collapse {
-  width: 1023px;
-  margin: 30px auto;
-
+  width: 100%;
   &_titre {
     @include collapseBase;
   }
@@ -32,6 +30,56 @@
       transform: rotate(180deg);
       transition: all 0.4s;
       cursor: pointer;
+    }
+  }
+}
+@media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+  .collapse {
+    &_titre {
+      border-radius: 5px;
+      font-size: 20px;
+      height: 40px;
+    }
+    &_logement {
+      border-radius: 5px;
+      font-size: 20px;
+      height: 40px;
+    }
+    &_content {
+      font-size: 18px;
+    }
+    &_arrow {
+      height: 24px;
+      &--up {
+        height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile)) {
+  .collapse {
+    &_titre {
+      border-radius: 5px;
+      font-size: 13px;
+      height: 30px;
+      padding: 0 12px;
+    }
+    &_logement {
+      border-radius: 5px;
+      font-size: 13px;
+      height: 30px;
+      padding: 0 12px;
+    }
+    &_content {
+      font-size: 12px;
+      padding: 18px 12px;
+    }
+    &_arrow {
+      height: 20px;
+      &--up {
+        height: 20px;
+      }
     }
   }
 }

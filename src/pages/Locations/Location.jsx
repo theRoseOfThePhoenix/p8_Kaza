@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import DataLogements from "../../logements.json";
 import Collapse from "../../components/Collapse/Collapse";
 import Host from "../../components/Host/Host";
@@ -7,18 +7,21 @@ import NameAndLocation from "../../components/NameAndLocation/NameAndLocation";
 import Tags from "../../components/Tags/Tags";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Stars from "../../components/Stars/Stars";
+import Error from "../Error/Error";
 
 function AffichageDuneLocation() {
   let { id } = useParams();
-  const redirection = useNavigate();
+  const [locationSelectionne, setLocationSelectionne] = useState({});
+
   useEffect(() => {
     let locationSelectionne = DataLogements.find(
       (objetLogement) => id === objetLogement.id
     );
-    if (!locationSelectionne) {
-      redirection("/*"); //page d'erreur
-    }
+    setLocationSelectionne(locationSelectionne);
   });
+  if (!locationSelectionne) {
+    return <Error />; //page d'erreur
+  }
   return (
     <div>
       {DataLogements.filter((objetLogement) => objetLogement.id === id).map(
@@ -26,13 +29,17 @@ function AffichageDuneLocation() {
           <div key={objetLogement.id} className="location">
             <Carrousel slides={objetLogement.pictures} />
             <div className="location_info">
-              <NameAndLocation
-                title={objetLogement.title}
-                location={objetLogement.location}
-              />
-              <Host propriètaire={objetLogement} />
-              <Tags infoTag={objetLogement} />
-              <Stars infos={objetLogement} />
+              <div className="location_info-left">
+                <NameAndLocation
+                  title={objetLogement.title}
+                  location={objetLogement.location}
+                />
+                <Tags infoTag={objetLogement} />
+              </div>
+              <div className="location_info-right">
+                <Host propriètaire={objetLogement} />
+                <Stars infos={objetLogement} />
+              </div>
             </div>
 
             <div className="location_collapse">

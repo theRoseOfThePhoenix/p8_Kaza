@@ -1,32 +1,24 @@
 .header {
-  position: relative;
+  margin: 40px 100px 50px 100px;
   display: flex;
   justify-content: space-between;
-  margin: auto;
-  height: 68px;
-  margin: 40px 20px;
-
+  align-items: center;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    margin: 20px 20px 20px 20px;
+  }
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+    margin: 30px 50px 30px 50px;
+  }
   &_logo {
-    width: 210px;
-    height: 68px;
-    cursor: pointer;
-
     @media screen and (max-width: map-get($breakpoints, mobile)) {
-      display: block;
       width: 145px;
       height: 47px;
-      transform: scale(0.8);
-      margin-left: -15px;
-      margin-bottom: 5px;
-      padding-bottom: 10px;
     }
-
     @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
       width: 180px;
       height: 58px;
     }
   }
-
   &_nav {
     gap: 57px;
     font-style: normal;
@@ -36,40 +28,28 @@
     display: flex;
     align-items: flex-end;
     text-align: right;
-  }
-  @media screen and (max-width: map-get($breakpoints, mobile)) {
-    width: 90%;
-    margin: 20px auto -19px;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
-    margin: 20px 20px 0 20px;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, breakhome)) {
-    margin-left: 125px;
-    margin-right: 125px;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      font-size: 12px;
+      column-gap: 10px;
+      text-transform: uppercase;
+    }
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+      column-gap: 25px;
+      font-size: 18px;
+    }
   }
 }
-
 .navlink {
   color: $black-color;
   padding-left: 57px;
   text-decoration: none;
   justify-content: space-between;
-
   &:hover {
-    text-decoration-line: underline;
+    text-decoration: underline;
     color: $primary-color;
     @include effect;
   }
+  @media screen and (max-width: map-get($breakpoints, tablette)) {
+    padding-left: 0;
+  }
 }
-
-//   @media screen and (max-width: map-get($breakpoints, mobile)) {
-//     font-size: 12px;
-//     padding-right: 3px;
-//     padding-left: 10px;
-//     padding-bottom: 20px;
-//     text-transform: uppercase;
-//   }
-// }
