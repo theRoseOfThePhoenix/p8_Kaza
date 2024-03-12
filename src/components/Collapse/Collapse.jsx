@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Arrow from "../../asset/down_arrow.png";
 import { useLocation } from "react-router-dom";
+
 function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
-
   const location = useLocation();
   const collapseLocation = () => {
     if (location.pathname === "/about") {
@@ -16,7 +16,7 @@ function Collapse({ title, content }) {
   return isOpen ? (
     <div className="collapse">
       <div
-        className={collapseLocation() ? "collapse_titre" : "collapse_logement"}
+        className={collapseLocation() ? "collapse_about" : "collapse_logement"}
         onClick={() => setIsOpen(false)}
       >
         {title}
@@ -27,7 +27,7 @@ function Collapse({ title, content }) {
   ) : (
     <div className="collapse">
       <div
-        className={collapseLocation() ? "collapse_titre" : "collapse_logement"}
+        className={collapseLocation() ? "collapse_about" : "collapse_logement"}
         onClick={() => setIsOpen(true)}
       >
         {title}

@@ -12,6 +12,7 @@ import Error from "../Error/Error";
 function AffichageDuneLocation() {
   let { id } = useParams();
   const [locationSelectionne, setLocationSelectionne] = useState({});
+  //usestate avec variable à modifier grace au setter
 
   useEffect(() => {
     let locationSelectionne = DataLogements.find(
