@@ -29,8 +29,8 @@ function Carrousel({ slides }) {
         />
       </div>
       <img
-        src={slides.length === 1 ? null : leftArrow}
-        alt={slides.length === 1 ? null : "flèche gauche"}
+        src={slides.length === 1 ? "" : leftArrow}
+        alt={slides.length === 1 ? "" : "flèche gauche"}
         className="slider_leftArrow"
         onClick={goToPrevious}
       />
@@ -38,8 +38,8 @@ function Carrousel({ slides }) {
         {currentIndex + 1}/{slides.length}
       </div>
       <img
-        src={slides.length === 1 ? null : rightArrow}
-        alt={slides.length === 1 ? null : "flèche droite"}
+        src={slides.length === 1 ? "" : rightArrow}
+        alt={slides.length === 1 ? "" : "flèche droite"}
         className="slider_rightArrow"
         onClick={goToNext}
       />

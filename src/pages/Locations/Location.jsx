@@ -18,10 +18,11 @@ function AffichageDuneLocation() {
     let locationSelectionne = DataLogements.find(
       (objetLogement) => id === objetLogement.id
     );
-    setLocationSelectionne(locationSelectionne);
-  });
-  if (!locationSelectionne) {
-    return <Error />; //page d'erreur
+
+    setLocationSelectionne(locationSelectionne ? locationSelectionne : {});
+  }, [id]);
+  if (Object.keys(locationSelectionne).length === 0) {
+    return <Error />;
   }
   return (
     <div>
