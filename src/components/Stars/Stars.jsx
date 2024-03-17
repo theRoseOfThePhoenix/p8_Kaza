@@ -6,7 +6,7 @@ function Stars({ infos }) {
   const scaleRating = infos.rating;
   const listeStars = [];
 
-  for (let i = 0; i <= 5; i++) {
+  for (let i = 1; i <= 5; i++) {
     let starSrc, starAlt;
 
     if (i <= scaleRating) {

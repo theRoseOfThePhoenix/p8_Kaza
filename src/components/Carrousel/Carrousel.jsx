@@ -5,13 +5,13 @@ import rightArrow from "../../asset/right_arrow.png";
 
 function Carrousel({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+//flèche de gauche
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
-
+//flèche de droite
   const goToNext = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
